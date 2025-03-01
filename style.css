@@ -1,37 +1,72 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
-    padding: 50px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffd700, #ff4500); /* Gold and orange gradient for Ramadan vibe */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
 }
 
 .container {
-    background: #fff;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+    z-index: 1;
 }
 
 h1 {
-    color: #007bff;
+    color: #ff4500; /* Orange for Ramadan theme */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-p {
-    font-size: 18px;
+.message {
+    color: #2f4f4f; /* Dark slate gray for contrast */
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.song-section {
+    margin-top: 20px;
 }
 
 button {
-    background-color: #28a745;
+    background-color: #ff4500;
     color: white;
-    border: none;
     padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #ff6347;
+}
+
+/* Moving Emojis (Crescent Moons and Hearts) */
+.emoji {
+    position: absolute;
+    font-size: 2em;
+    opacity: 0.7;
+    animation: float 4s infinite ease-in-out;
+}
+
+.crescent-moon {
+    content: "🌙";
+}
+
+.heart {
+    content: "🤍";
 }
