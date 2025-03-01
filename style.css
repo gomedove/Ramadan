@@ -13,14 +13,14 @@ body {
 
 .container {
     text-align: center;
-    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent white for contrast */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     position: relative;
     max-width: 400px;
     width: 90%;
-    z-index: 1;
+    z-index: 2;
 }
 
 h1 {
@@ -55,18 +55,46 @@ button:hover {
     background-color: #ff6347;
 }
 
-/* Moving Emojis (Crescent Moons and Hearts) */
-.emoji {
+/* Heart Shape Made of Crescent Moons */
+.heart-shape {
+    position: absolute;
+    width: 200px; /* Adjust size as needed */
+    height: 170px; /* Adjust height for heart shape */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.heart-shape::before,
+.heart-shape::after {
+    content: "🌙";
+    position: absolute;
+    width: 100px;
+    height: 160px;
+    background: transparent;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    color: #ffd700; /* Gold for Ramadan theme */
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 160px;
+}
+
+.heart-shape::after {
+    left: 50px;
+    transform: rotate(45deg);
+}
+
+/* Moving Hearts */
+.heart {
     position: absolute;
     font-size: 2em;
     opacity: 0.7;
     animation: float 4s infinite ease-in-out;
 }
 
-.crescent-moon {
-    content: "🌙";
-}
-
-.heart {
-    content: "🤍";
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
 }
